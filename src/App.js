@@ -4,7 +4,6 @@ import Header from "./components/layout/Header";
 import Hero from "./components/layout/Hero";
 import Meals from "./components/meals/Meals";
 import CartProvider from "./store/CartProvider";
-import Counter from "./components/Counter";
 
 function App() {
   const [cartIsShown, setCartIsShown] = useState(false);
@@ -16,13 +15,12 @@ function App() {
   };
   return (
     <CartProvider>
-      <Counter />
-      {/* {cartIsShown && <Cart onClose={hideCart} />}
+      {cartIsShown && <Cart onClose={hideCart} />}
       <Header onShowCart={showCart} />
       <Hero />
       <main>
         <Meals />
-      </main> */}
+      </main>
     </CartProvider>
   );
 }
